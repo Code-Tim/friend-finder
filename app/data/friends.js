@@ -1,12 +1,12 @@
 var friends = [
 
     {
-        "name": "Taylor",
-        "photo": "http://ia.media-imdb.com/images/M/MV5BMjA1NzIxMjI3Nl5BMl5BanBnXkFtZTgwMzU1NjE2MTE@._V1_.jpg",
+        "name": "Rainbow",
+        "photo": "/photos/rainbow.jpeg",
         "scores": [
-            5,
-            1,
             4,
+            1,
+            3,
             4,
             5,
             1,
@@ -17,8 +17,8 @@ var friends = [
         ]
     },
     {
-        "name": "Britney Spears",
-        "photo": "https://i.scdn.co/image/7fa2bde8d2837784a847f8201686b257757a749f.jpg",
+        "name": "Edna Stubber",
+        "photo": "/photos/YellowEdna.jpeg",
         "scores": [
             3,
             1,
@@ -33,8 +33,8 @@ var friends = [
         ]
     },
     {
-        "name": "Mickey Mouse",
-        "photo": "http://ia.media-imdb.com/images/M/MV5BMTc3MzgyODMzMV5BMl5BanBnXkFtZTgwMTgzMjgxNjE@._V1_.jpg",
+        "name": "Reece McCloud",
+        "photo": "/photos/ReeceMcCloud.jpeg",
         "scores": [
             3,
             1,
@@ -49,8 +49,8 @@ var friends = [
         ]
     },
     {
-        "name": "Kanye West",
-        "photo": "http://verysmartbrothas.com/images/2016/02/kanye-west-fan.jpg",
+        "name": "Willy Carpenter",
+        "photo": "/photos/Willy.jpeg",
         "scores": [
             1,
             3,

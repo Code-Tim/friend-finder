@@ -1,23 +1,28 @@
-const express = require("express")
-let app = express()
+const express = require("express");
+const bodyParser = require('body-parser');
+const path = require('path');
 
-app.use(express.json())
-app.use(express.urlencoded({ extended: true }))
-app.use(express.static("public"))
 
-app.use((req, res, next) => {
-    console.log(req.method, req.url, res.statusCode)
-    next()
-})
+var app = express();
+var PORT = 8080;
 
-app.get("/name/:id", (req, res) => {
-    res.send(`hello ${req.params.id}`)
-})
-app.get("/id", (req, res) => {
-    res.send(`never GONNA HAPPEN`)
-})
-app.get("*", (req, res) => {
-    res.send(`${req.url} is nonsense man!`)
-})
+app.use(bodyParser.json());
+app.use(bodyParser.urlencoded({ extended: true }));
+app.use(bodyParser.text());
+app.use(bodyParser.json({ type: 'application/vnd.api+json' }));
 
-app.listen(8888, () => console.log("listening"))
+app.use(express.static('app'));
+
+app.use(express.static(path.join(__dirname, "public")));
+
+// app.use((req, res, next) => {
+//     console.log(req.method, req.url, res.statusCode)
+//     next()
+// })
+
+// Routes
+require('./routing/apiRoutes')(app);
+require('./routing/htmlRoutes')(app);
+
+
+app.listen(PORT, () => console.log("App listening on PORT " + PORT));
